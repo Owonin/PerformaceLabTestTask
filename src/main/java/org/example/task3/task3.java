@@ -2,7 +2,6 @@ package org.example.task3;
 
 import java.io.*;
 import java.util.HashMap;
-import java.util.Scanner;
 import java.util.Stack;
 
 public class task3 {
@@ -10,11 +9,9 @@ public class task3 {
         Stack<Integer> ids = new Stack<>(); //Стек, который хранит значения id
         HashMap<Integer, String> results = new HashMap<>(); //Кеш значений value для каждого id
 
-        Scanner in = new Scanner(System.in);
-
-        String file1 = in.next();
-        String file2 = in.next();
-        String file3 = in.next();
+        String file1 = args[0];
+        String file2 = args[1];
+        String file3 = args[2];
 
 
         try (BufferedReader br = new BufferedReader(new FileReader(file1));

@@ -4,13 +4,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class task4 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-
-        String fileName = in.next();
+        String fileName = args[0];
 
         try (BufferedReader br = new BufferedReader(new FileReader(fileName))) {
             List<Integer> nums = new ArrayList<>();

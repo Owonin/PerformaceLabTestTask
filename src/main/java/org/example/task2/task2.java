@@ -5,14 +5,12 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class task2 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
 
-        String file1 = in.next();
-        String file2 = in.next();
+        String file1 = args[0];
+        String file2 = args[1];
 
         try (BufferedReader br = new BufferedReader(new FileReader(file1));
              BufferedReader br2 = new BufferedReader(new FileReader(file2))) {
@@ -68,13 +66,13 @@ public class task2 {
         }
 
         public int isPointInside(Point point) {
-            double ඞ = Math.pow(point.x - x, 2) + Math.pow(point.y - y, 2);
+            double data = Math.pow(point.x - x, 2) + Math.pow(point.y - y, 2);
             double radiusPow = Math.pow(radius, 2.0);
 
-            if (ඞ == radiusPow) {
+            if (data == radiusPow) {
                 return 0;
             }
-            if (ඞ > radiusPow) {
+            if (data > radiusPow) {
                 return 2;
             }
             return 1;
